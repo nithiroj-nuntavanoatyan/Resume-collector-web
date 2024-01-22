@@ -4,6 +4,7 @@
 
 :root {
     --themeColor: #E3F2EF;
+    box-sizing: border-box;
 }
 
 body {

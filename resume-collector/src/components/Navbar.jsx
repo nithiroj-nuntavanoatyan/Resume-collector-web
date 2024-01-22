@@ -1,96 +1,56 @@
+// import React from 'react'
+import "./Navbar.css"
+import { Link, NavLink } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
+import { FaHome } from "react-icons/fa";
+import { MdOutlineFavorite } from "react-icons/md";
+import { BsPersonVcardFill } from "react-icons/bs";
+import { HiUserGroup } from "react-icons/hi2";
+import { LuMenuSquare } from "react-icons/lu";
 import { useState } from "react";
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); //false
-  };
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav style={{ backgroundColor: "#2B5E53", padding: "1rem" }}>
-      <div className="flex items-center justify-between">
-        <div className="text-white text-2xl font-bold">
-          <a href="">Resume Collector</a>
-        </div>
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen) // !false = true
+    }
 
-        {/*Toggle menu button*/}
-        <div className="md:hidden">
-          <button id="menu-toggle" className="text-white" onClick={toggleMenu}>
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-              className="w-6 h-6"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+    return (
+        <nav className="navbar bg-[#2B5E53] px-5 py-4 min-w-min min-h-min">
+            <div className="flex justify-between items-center">
+                <div className="title text-4xl font-black text-[#E3F2EF] uppercase"><Link to="/Home">ResumeCollector</Link></div>
 
-        <ul className="hidden md:flex space-x-4">
-          <li>
-            <a href="#" className="text-white">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              Search
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              About us
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              Login
-            </a>
-          </li>
-        </ul>
-      </div>
-      {/* Mobile Menu*/}
-      {isMenuOpen ? (
-        <ul className="flex-col md:hidden flex">
-          <li className="py-2">
-            <a href="#" className="text-white">
-              Home
-            </a>
-          </li>
-          <li className="py-2">
-            <a href="#" className="text-white">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white">
-              Search
-            </a>
-          </li>
-          <li className="py-2">
-            <a href="#" className="text-white">
-              About us
-            </a>
-          </li>
-          <li className="py-2">
-            <a href="#" className="text-white">
-              Login
-            </a>
-          </li>
-        </ul>
-      ) : null}
-    </nav>
-  );
+                {/* Menubutton */}
+                <div className="button xl:hidden" onClick={toggleMenu}>
+                    <LuMenuSquare size={45} color="white" />
+                </div>
+
+                <ul className="nav-items text-xl font-bold text-[#E3F2EF] hidden xl:flex uppercase">
+                    <li><NavLink to="/Home"><span className="flex items-center"><FaHome className="mr-2" />Home</span></NavLink></li>
+                    <li><NavLink to="/Search"><span className="flex items-center"><IoMdSearch className="mr-2" />Search</span></NavLink></li>
+                    <li><NavLink to="/Resume"><span className="flex items-center"><BsPersonVcardFill className="mr-2" />Resume</span></NavLink></li>
+                    <li><NavLink to="/Favorites"><span className="flex items-center"><MdOutlineFavorite className="mr-2" />Favorites</span></NavLink></li>
+                    <li><NavLink to="/AboutUs"><span className="flex items-center"><HiUserGroup className="mr-2" />About Us</span></NavLink></li>
+                    <li><NavLink to="Login"><span className="flex items-center"><FaUserCircle className="mr-2" />Login</span></NavLink></li>
+                </ul>
+            </div>
+
+            {/* Other device */}
+            {isMenuOpen ? (
+                    <ul className="nav-items-responsive text-xl font-bold text-[#E3F2EF] flex-col xl:hidden uppercase">
+                        <li className="py-1.5"><NavLink to="/Home"><span className="flex items-center"><FaHome className="mr-2" />Home</span></NavLink></li>
+                        <li className="py-1.5"><NavLink to="/Search"><span className="flex items-center"><IoMdSearch className="mr-2" />Search</span></NavLink></li>
+                        <li className="py-1.5"><NavLink to="/Resume"><span className="flex items-center"><BsPersonVcardFill className="mr-2" />Resume</span></NavLink></li>
+                        <li className="py-1.5"><NavLink to="/Favorites"><span className="flex items-center"><MdOutlineFavorite className="mr-2" />Favorites</span></NavLink></li>
+                        <li className="py-1.5"><NavLink to="/AboutUs"><span className="flex items-center"><HiUserGroup className="mr-2" />About Us</span></NavLink></li>
+                        <li className="py-1.5"><NavLink to="Login"><span className="flex items-center"><FaUserCircle className="mr-2" />Login</span></NavLink></li>
+                    </ul>
+                ) : null}
+        </nav>
+    )
 }
 
-export default Navbar;
+export default Navbar
