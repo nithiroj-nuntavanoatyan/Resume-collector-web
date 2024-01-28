@@ -1,12 +1,12 @@
 import './footer.css'
 
-const footer = () => {
+const Footer = () => {
     return (  
         <div className='footer'>
             <div className='sb__footer section__padding'>
                 <div className='sb__footer-links'>
                     <div className='sb__footer-links-div'>
-                        <h4>Help</h4>
+                        
                     </div>
                 </div>
             </div>
@@ -14,4 +14,4 @@ const footer = () => {
     );
 }
  
-export default footer;
+export default Footer;

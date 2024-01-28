@@ -19,9 +19,9 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar bg-[#2B5E53] px-5 py-4 min-w-min min-h-min">
-            <div className="flex justify-between items-center">
-                <div className="title text-4xl font-black text-[#E3F2EF] uppercase"><Link to="/Home">ResumeCollector</Link></div>
+        <nav className="navbar bg-[#2B5E53] h-full w-full ">
+            <div className="flex justify-between items-center h-auto px-5 py-4">
+                <div className="title text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#ffffff] uppercase "><Link to="/Home">ResumeCollector</Link></div>
 
                 {/* Menubutton */}
                 <div className="button xl:hidden" onClick={toggleMenu}>

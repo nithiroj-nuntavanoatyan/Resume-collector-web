@@ -7,10 +7,11 @@ import Search from './pages/Search'
 import Favorites from './pages/Favorites'
 import Login from './pages/Login'
 import Home from './pages/Home'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
+    <div className='Mainpage flex flex-col'>
       <Navbar/>
       <Routes>
         <Route path='/Home' element={<Home/>}/>
@@ -20,7 +21,8 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
-    </>
+      <Footer />
+    </div>
   )
 }
 
