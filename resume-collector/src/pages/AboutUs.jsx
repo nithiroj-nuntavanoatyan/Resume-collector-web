@@ -28,7 +28,6 @@ function Favorites() {
                             <p className="intro flex justify-between items-center text-3xl py-4 md:text-4xl ">{aboutus_contact2}</p>
                             <p className="intro flex justify-between items-center text-3xl py-4 md:text-4xl ">{aboutus_contact3}</p>
                         </div>
-                        <img className="picture1 max-w-[512px] max-h-[512px]" src="" />
                     </div>
                 </div>
             </section>

@@ -19,7 +19,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar bg-[#2B5E53] h-full w-full ">
+        <nav className="navbar bg-[#2B5E53] h-full w-full sticky top-0">
             <div className="flex justify-between items-center h-auto px-5 py-4">
                 <div className="title text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#ffffff] uppercase "><Link to="/Home">ResumeCollector</Link></div>
 
