@@ -1,11 +1,18 @@
-import "./Search.css"
+import Searchbar from "../components/searchbar"
+
 
 function Search () {
     
-    const thai_searchtitle = "ยินดีต้อนรับเข้าสู่หน้าค้นหา resume ที่คุณต้องการคุณสามารถค้นหาได้ผ่านการพิมพ์ tag ต่าง ๆ เช่น วิศวกรรม  "
+    const thai_searchtitle = "ค้นหา resume ที่คุณต้องการได้ผ่านการพิมพ์ tag ต่าง ๆ"
     return (
         <section className='hero'>
-            <h1>{thai_searchtitle}</h1>
+            <div className="flex justify-center items-center">
+                <div className="text-3xl sm:text-5xl p-5 text-center"><h1>{thai_searchtitle}</h1></div>
+            </div>
+            <div className="flex justify-center items-center">
+                <Searchbar/>
+            </div>
+            
         </section>
     )
 }

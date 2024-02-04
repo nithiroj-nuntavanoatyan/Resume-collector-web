@@ -5,6 +5,8 @@
 :root {
     --themeColor: #E3F2EF;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
