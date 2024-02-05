@@ -24,8 +24,6 @@ We use this step so that our work update together when someone add new file or c
 
 2.git pull
 
-3.git regit rebase origin/main
-
 the step below are for people who want to create branch for themself then merge it with main branch i can't explain it clearly so i will paste the link.
 
 https://www.youtube.com/watch?v=HkdAHXoRtos&t=331s&ab_channel=Fireship
