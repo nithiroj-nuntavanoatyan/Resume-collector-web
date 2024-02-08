@@ -20,6 +20,7 @@ Step for clone project and run
 Step for working together
 
 We use this step so that our work update together when someone add new file or change something
+
 1.git fetch
 
 2.git pull
