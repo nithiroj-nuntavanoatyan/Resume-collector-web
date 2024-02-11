@@ -8,7 +8,7 @@ import Favorites from './pages/Favorites'
 import Account from './pages/Account'
 import Home from './pages/Home'
 import Footer from './components/Footer'
-import Programmer from './pages/Programmer'
+import Job from './pages/๋Job'
 
 
 //this is where most our pages and component went  we use app to render in main.jsx
@@ -20,7 +20,7 @@ function App() {
         <Route path='/' element={<Navigate to= "/Home" />} />
         <Route path='/Home' element={<Home />} />
         <Route path='/Resume' element={<Resume />} />
-        <Route path='/Resume/Programmer' element={<Programmer />} />
+        <Route path='/Resume/:Jobtitle' element={<Job />} />
         <Route path='/Search' element={<Search />} />
         <Route path='/Favorites' element={<Favorites />} />
         <Route path='/AboutUs' element={<AboutUs />} />
