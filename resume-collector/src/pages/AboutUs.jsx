@@ -4,12 +4,10 @@ import { FaFacebook } from "react-icons/fa";
 
 
 function Favorites() {
-    const thai_aboutusintroduction = "Resume-collector คือเว็บไซต์ที่รวบรวม resume เพื่อเป็นประโยขน์แก่ผู้ที่ต้องการเขียน resume เพื่อนำไปใช้สมัครงานหรือนำไปใช้เป็นตัวอย่างในการอ้างอิงเพื่อที่จะเขียน resume ที่ดี"
-    const thai_aboutustitle = "About Us"
+    const thai_aboutusintroduction = "Resume explorer คือเว็บไซต์ที่รวบรวม resume เพื่อเป็นประโยขน์แก่ผู้ที่ต้องการเขียน resume เพื่อนำไปใช้สมัครงานหรือนำไปใช้เป็นตัวอย่างในการอ้างอิงเพื่อที่จะเขียน resume ที่ดี"
+    const thai_aboutustitle = "เกี่ยวกับเรา"
     const aboutus_contact = "Email : nithiroj.n@kkumail.com"
     const aboutus_contact1 = "Facebook : Not available "
-    // const aboutus_contact2 = "Email :"
-    // const aboutus_contact3 = "Email :"
     return (
         <section className='about'>
             <section className='aboutus pr-4 pl-4 py-6'>

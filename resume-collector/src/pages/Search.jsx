@@ -3,7 +3,7 @@ import Searchbar from "../components/searchbar"
 
 function Search () {
     
-    const thai_searchtitle = "ค้นหา resume ที่คุณต้องการได้ผ่านการพิมพ์ tag ต่าง ๆ"
+    const thai_searchtitle = "ค้นหาเรซูเม่ ที่คุณต้องการได้ผ่านการพิมพ์"
     return (
         <section className='hero'>
             <div className="flex justify-center items-center">

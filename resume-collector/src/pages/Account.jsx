@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
 
-    const thai_logintitle = "Resume-collector Account"
+    const thai_logintitle = "เข้าสู่ระบบเพื่อใช้งาน"
     
     // please don't delete this delete this make the whole account page disappear
     const [user, setUser] = useState();
@@ -48,20 +48,20 @@ function Login() {
                 {mainuser ? (
                     <>
                         <div className="logininfo flex-cols m-6">
-                            <h1 className="welcome flex justify-center items-center text-3xl md:text-6xl my-4 mx-auto font-bold text-center">Welcome {mainuser.displayName}</h1>
+                            <h1 className="welcome flex justify-center items-center text-3xl md:text-5xl my-4 mx-auto font-medium text-center">สวัสดี {mainuser.displayName}</h1>
                             <div className="photo flex justify-center items-center">
                                 <img className='userpicture rounded-2xl m-4' src={mainuser.photoURL} alt="dp" referrerPolicy="no-referrer" />
                             </div>
                             <p className="email text-xl md:text-3xl flex justify-center items-center">{mainuser.email}</p>
                         </div>
-                        <button className="btnlogout bg-[#6962AD] hover:bg-[#4a4675] text-[#ffffff] hover:text-[#E3F2EF] rounded-xl text-4xl md:text-6xl py-5 px-3 w-auto  flex justify-center items-center uppercase border-b-8 border-[#0A1D56] hover:border-[#607eda] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110" onClick={handleGoogleLogout}>
+                        <button className="btnlogout bg-[#6962AD] hover:bg-[#4a4675] text-[#ffffff] hover:text-[#E3F2EF] rounded-xl text-3xl md:text-6xl py-5 px-3 w-auto  flex justify-center items-center uppercase border-b-8 border-[#0A1D56] hover:border-[#607eda] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110" onClick={handleGoogleLogout}>
                             Logout
                         </button>
                     </>
                 ) : (
                     <div>
-                         <h1 className="flex justify-center items-center text-3xl md:text-6xl my-4 mx-auto font-bold text-center">{thai_logintitle}</h1>
-                        <button className="btnsignin bg-[#6962AD] hover:bg-[#4a4675] rounded-xl text-[#ffffff] hover:text-[#E3F2EF] text-2xl font-semibold md:text-6xl p-5 flex justify-center items-center uppercase border-b-8 border-[#0A1D56] hover:border-[#607eda] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110" onClick={handleGoogleSignIn}>
+                         <h1 className="flex justify-center items-center text-3xl md:text-5xl my-4 mx-auto font-medium text-center">{thai_logintitle}</h1>
+                        <button className="btnsignin bg-[#6962AD] hover:bg-[#4a4675] rounded-xl text-[#ffffff] hover:text-[#E3F2EF] text-2xl font-semibold md:text-4xl p-5 flex justify-center items-center uppercase border-b-8 border-[#0A1D56] hover:border-[#607eda] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110" onClick={handleGoogleSignIn}>
                             <span className="flex items-center"><FcGoogle size={85} className="mr-2" />sign in with google</span>
                         </button>
                     </div>

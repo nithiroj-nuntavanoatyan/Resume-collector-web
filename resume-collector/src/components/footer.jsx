@@ -1,5 +1,5 @@
 
-import logo from '../images/Resume-collector-logo.png'
+import logo from '../images/Resume-collector-logo2.png'
 import { useState } from 'react';
 import { IoCloseCircleSharp } from "react-icons/io5";
 
@@ -29,18 +29,18 @@ function Footer() {
 
 
     return (
-        <footer className=" mt-auto bottom-0 bg-[#67438E]">
+        <footer className="mt-auto bottom-0 bg-[#67438E]">
             <div className="w-full mx-auto p-4 md:py-8">
                 <div className="md:flex  md:justify-between items-center">
                     <div>
                         <a href="/home" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                             <img src={logo} className="w-8 md:w-16 md:h-16" alt="Logo" />
-                            <span className="self-center m-4 font-semibold text-white text-2xl sm:text-3xl md:text-5xl text-wrap">Resume-Collector</span>
+                            <span className="self-center m-4 font-semibold text-white text-2xl text-wrap">Resume Explorer</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
                         <div>
-                            <h2 className="mb-3 text-lg font-semibold text-gray-900 uppercase dark:text-white">Visual from</h2>
+                            <h2 className="mb-3 text-lg font-medium text-white">ภาพจาก</h2>
                             <ul className="text-[#ffffff] font-medium">
                                 <li className="mb-4">
                                     <a href="https://www.freepik.com/" className="hover:underline" target="_blank" rel="noopener noreferrer">Freepik</a>
@@ -51,7 +51,7 @@ function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-3 text-lg font-semibold text-gray-900 uppercase dark:text-white">Help</h2>
+                            <h2 className="mb-3 text-lg font-medium text-gray-900 uppercase dark:text-white">ช่วยเหลือ</h2>
                             <ul className="text-[#ffffff] font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline" onClick={handlePrivacyOpen}>Privacy Policy</a>
