@@ -9,6 +9,7 @@ What we are working with are 2 folders
 2.Pages for creating pages to show
 
 หลังจาก git clone โฟลเดอร์นี้ไปแล้ว เปิด ide เปิด terminal แล้วพิมพ์ cd resume-collector จากนั้นพิมพ์ npm install แล้วค่อย npm run dev หลังจากนั้นจะขึ้น link ที่เขียนว่า localhost ให้กดเข้าไปเลยแล้วจะนำไปเข้าสู่หน้าเว็บ
+
 Step for clone project and run
 
 1.git clone this repository if clone already skip
