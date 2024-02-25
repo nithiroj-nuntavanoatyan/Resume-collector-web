@@ -1,27 +1,27 @@
 import ResumeCategoryCard from "../components/ResumeCategoryCard";
-import { element } from "prop-types";
+import { } from "prop-types";
 
 //this is where the resume page show
 
 function Resume() {
 
     const categoryName = [
-        {name:"Programmer"},
-        {name:"Engineer"},
-        {name:"Marketing"},
-        {name:"Manager"},
-        {name:"Finance"},
-        {name: "บลาๆ"}
+        { name: "โปรแกรมเมอร์" },
+        { name: "การตลาด" },
+        { name: "บริหาร" },
+        { name: "การเงิน & การบัญชี" },
     ]
 
     return (
         <section className='hero'>
             <div className="flex justify-center pt-6 px-4">
-                <h1 className="resume-head text-4xl font-extrabold sm:text-3xl lg:text-5xl text-center uppercase">หมวดหมู่ของเรซูเม่</h1>
+                <h1 className="resume-head text-2xl font-bold sm:text-3xl lg:text-5xl text-center uppercase">
+                    หมวดหมู่ของเรซูเม่
+                </h1>
             </div>
-            <div className="cardcategory place-items-center grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="cardcategory place-items-center grid m-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {categoryName.map((element) => {
-                    return <ResumeCategoryCard name ={element.name}/>
+                    return <ResumeCategoryCard key={element.name} name={element.name} />
                 })}
             </div>
         </section>

@@ -1,4 +1,3 @@
-// import React from 'react'
 import "./Navbar.css"
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
@@ -15,10 +14,10 @@ function Navbar() {
 
     //function for make the menu appear when size is small
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // function for setmenuopen in responsive mode
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen) // !false = true
     }
-    
 
     return (
         <nav className="navbar bg-[#2B5E53] h-auto w-full sticky top-0 ">
@@ -48,14 +47,52 @@ function Navbar() {
 
             {/* Other device */}
             {isMenuOpen ? (
-                <ul className="nav-items-responsive text-xl font-bold text-[#E3F2EF] flex-col xl:hidden uppercase ">
-                    <li className="py-1.5"><NavLink to="/Home"><span className="flex items-center"><FaHome className="mr-2" />หน้าหลัก</span></NavLink></li>
-                    <li className="py-1.5"><NavLink to="/Search"><span className="flex items-center"><IoMdSearch className="mr-2" />ค้นหา</span></NavLink></li>
-                    <li className="py-1.5"><NavLink to="/Resume"><span className="flex items-center"><BsPersonVcardFill className="mr-2" />เรซูเม่</span></NavLink></li>
-                    <li className="py-1.5"><NavLink to="/Favorites"><span className="flex items-center"><MdOutlineFavorite className="mr-2" />เรซูเม่ที่ถูกใจ</span></NavLink></li>
-                    <li className="py-1.5"><NavLink to="/AboutUs"><span className="flex items-center"><HiUserGroup className="mr-2" />เกี่ยวกับเรา</span></NavLink></li>
-                    <li className="py-1.5"><NavLink to="/Account"><span className="flex items-center"><FaUserCircle className="mr-2" />บัญชี</span></NavLink></li>
-                </ul>
+                <nav className="navbar-other-device bg-[#2B5E53] h-auto w-full sticky top-0">
+                    <ul className="nav-items-responsive text-xl font-bold text-[#E3F2EF] flex-col xl:hidden uppercase ">
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/Home">
+                                    <span className="flex items-center"><FaHome className="mr-2" />หน้าหลัก</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/Search">
+                                    <span className="flex items-center"><IoMdSearch className="mr-2" />ค้นหา</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/Resume">
+                                    <span className="flex items-center"><BsPersonVcardFill className="mr-2" />เรซูเม่</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/Favorites">
+                                    <span className="flex items-center"><MdOutlineFavorite className="mr-2" />เรซูเม่ที่ถูกใจ</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/AboutUs">
+                                    <span className="flex items-center"><HiUserGroup className="mr-2" />เกี่ยวกับเรา</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                        <li className="py-1.5">
+                            <div onClick={() => setIsMenuOpen(false)}>
+                                <NavLink to="/Account">
+                                    <span className="flex items-center"><FaUserCircle className="mr-2" />บัญชี</span>
+                                </NavLink>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             ) : null}
         </nav>
     )
