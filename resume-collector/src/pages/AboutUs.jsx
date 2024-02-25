@@ -10,12 +10,12 @@ function Favorites() {
     const aboutus_contact1 = "Facebook : Not available "
     return (
         <section className='about'>
-            <section className='aboutus pr-4 pl-4 py-6'>
-                <div className="TextPanel1 w-full h-2/4">
+            <section className='aboutus w-full p-4'>
+                <div className="TextPanel1 h-2/4">
                     <div className="alltext text-center flex justify-center items-center">
-                        <div className="text flex-col justify-between items-center max-w-[1080px]">
-                            <h1 className="welcome text-4xl font-extrabold md:text-5xl">{thai_aboutustitle}</h1>
-                            <p className="intro flex justify-between items-center text-3xl py-4 md:text-4xl ">{thai_aboutusintroduction}</p>
+                        <div className="text flex-col justify-between items-center">
+                            <h1 className="welcome text-2xl font-extrabold md:text-5xl">{thai_aboutustitle}</h1>
+                            <p className="intro flex justify-between items-center text-2xl py-4 md:text-4xl ">{thai_aboutusintroduction}</p>
                         </div>
                     </div>
                 </div>
@@ -24,10 +24,10 @@ function Favorites() {
             <section>
             <div className="TextPanel1 h-full w-full bg-[#9793CD] pr-4 pl-4 py-6">
                     <div className="alltext text-center flex justify-center items-center text-[#e0f8f3]">
-                        <div className="text flex-col justify-between items-center max-w-[1080px]">
-                            <h1 className="welcome text-4xl font-extrabold md:text-5xl">ช่องทางการติดต่อ</h1>
-                            <p className="intro1 flex justify-between items-center text-3xl py-4 md:text-4xl "><span className="flex items-center"><MdOutlineEmail className="mr-2"/>{aboutus_contact}</span></p>
-                            <p className="intro2 flex justify-between items-center text-3xl py-4 md:text-4xl "><span className="flex items-center"><FaFacebook className="mr-2"/>{aboutus_contact1}</span></p>                     
+                        <div className="text flex-col justify-between items-center ">
+                            <h1 className="welcome text-3xl font-extrabold md:text-5xl">ช่องทางการติดต่อ</h1>
+                            <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-4xl "><span className="flex items-center"><MdOutlineEmail className="mr-2"/>{aboutus_contact}</span></p>
+                            <p className="intro2 flex justify-between items-center sm:text-2xl py-4 md:text-4xl "><span className="flex items-center"><FaFacebook className="mr-2"/>{aboutus_contact1}</span></p>                     
                         </div>
                     </div>
                 </div>
