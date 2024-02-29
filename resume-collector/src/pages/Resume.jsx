@@ -1,3 +1,4 @@
+
 import ResumeCategoryCard from "../components/ResumeCategoryCard";
 import { } from "prop-types";
 
@@ -6,11 +7,12 @@ import { } from "prop-types";
 function Resume() {
 
     const categoryName = [
-        { name: "โปรแกรมเมอร์" },
-        { name: "การตลาด" },
-        { name: "บริหาร" },
-        { name: "การเงิน & การบัญชี" },
+        { name: "โปรแกรมเมอร์", image:"https://cdn-icons-png.flaticon.com/128/3271/3271001.png"},
+        { name: "การตลาด", image: "https://cdn-icons-png.flaticon.com/128/1260/1260235.png" },
+        { name: "บริหาร", image: "https://cdn-icons-png.flaticon.com/128/3273/3273070.png" },
+        { name: "การเงินและการบัญชี", image: "https://cdn-icons-png.flaticon.com/128/1552/1552545.png" },
     ]
+    
 
     return (
         <section className='hero'>
@@ -21,7 +23,7 @@ function Resume() {
             </div>
             <div className="cardcategory place-items-center grid m-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {categoryName.map((element) => {
-                    return <ResumeCategoryCard key={element.name} name={element.name} />
+                    return <ResumeCategoryCard key={element.name} name={element.name} image={element.image} />
                 })}
             </div>
         </section>

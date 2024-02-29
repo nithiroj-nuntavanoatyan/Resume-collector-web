@@ -1,7 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import AddResume from "../components/AddResume"
 import ResumeCard from "../components/ResumeCard"
-import { Link } from "react-router-dom"
 import SortingFilter from "../components/SortingFilter"
 
 
@@ -10,15 +9,15 @@ import SortingFilter from "../components/SortingFilter"
 function Job() {
 
   const { Jobtitle } = useParams()
-  // const job = useLoaderData()
-
   return (
     <div>
       <div className="header">
-        <div className="headername text-3xl md:text-5xl m-4 text-center font-semibold grid-rows-3 md:flex md:justify-evenly items-center ">
+        <div className="headername text-3xl md:text-5xl my-3 text-center font-semibold grid-rows-3 md:flex md:justify-around items-center ">
           {Jobtitle}
+          <ul>
           <SortingFilter/>
           <AddResume/>
+          </ul>
         </div>
 
       </div>
@@ -32,12 +31,3 @@ function Job() {
 }
 
 export default Job
-
-// loader function
-// export const jobLoader = async ({ params }) => {
-//   const { Jobtitle } = params
-
-//   const res = await fetch ('/Resume/' + Jobtitle)
-
-//   return res.json()
-// } 

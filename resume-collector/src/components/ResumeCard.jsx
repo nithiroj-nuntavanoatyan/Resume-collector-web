@@ -14,7 +14,7 @@ const ResumeCard = () => {
 
 
     return (
-        <div className=' flex card-container justify-center m-4 rounded-xl w-10/12 h-10/12 md:w-9/12 md:h-[300px]  bg-[#6962AD] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg'>
+        <div className='card-container flex justify-center m-4 rounded-xl w-10/12 h-10/12 md:w-9/12 md:h-[300px]  bg-[#6962AD] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg'>
             {mainuser ? (
                 <>
                     <div className='p-4 flex flex-col justify-center text-center '>
@@ -31,7 +31,7 @@ const ResumeCard = () => {
             ) : (
                 <>
                     <div className='p-4 flex flex-col justify-center text-center '>
-                        <button className="link text-4xl bg-white m-5 p-4 rounded-lg hover:bg-[#2B5E53] hover:text-[#ffffff] ">
+                        <button className="link text-xl md:text-2xl bg-white m-5 p-4 rounded-lg hover:bg-[#2B5E53] hover:text-[#ffffff] ">
                             <a href= "/Account" >{thailogintitle}</a>
                         </button>
                     </div>
