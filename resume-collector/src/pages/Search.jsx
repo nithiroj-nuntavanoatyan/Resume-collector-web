@@ -1,4 +1,5 @@
-import Searchbar from "../components/searchbar"
+import Searchbar from "../components/Searchbar"
+
 
 
 function Search () {
@@ -7,9 +8,9 @@ function Search () {
     return (
         <section className='hero'>
             <div className="flex justify-center items-center">
-                <div className="text-2xl font-bold sm:text-5xl p-5 text-center"><h1>{thai_searchtitle}</h1></div>
+                <div className="text-2xl font-bold sm:text-5xl m-2 p-4 text-center"><h1>{thai_searchtitle}</h1></div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="">
                 <Searchbar/>
             </div>
             
