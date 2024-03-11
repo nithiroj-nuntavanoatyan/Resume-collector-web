@@ -9,6 +9,7 @@ import Account from './pages/Account'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import Job from './pages/๋Job'
+import Searchbar from './components/Searchbar'
 
 
 //this is where most our pages and component went  we use app to render in main.jsx
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Resume' element={<Resume />} />
         <Route path='/Resume/:Jobtitle' element={<Job />} />
         <Route path='/Search' element={<Search />} />
+        <Route path='/Search/Searchbar' element={<Searchbar />} />
         <Route path='/Favorites' element={<Favorites />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/Account' element={<Account />} />

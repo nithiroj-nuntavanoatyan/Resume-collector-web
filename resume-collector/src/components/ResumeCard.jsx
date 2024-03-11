@@ -4,9 +4,10 @@
 import RatingStar from "./RatingStar";
 import Bookmark from "./bookmark";
 
-const ResumeCard = () => {
+const ResumeCard = ( {resumeData}) => {
 
     const thailogintitle = "โปรดเข้าสู่ระบบเพื่อดูเรซูเม่"
+    const { name, link, tags } = resumeData ;
 
     const mainuser = JSON.parse(localStorage.getItem('user'));
 
@@ -18,11 +19,12 @@ const ResumeCard = () => {
             {mainuser ? (
                 <>
                     <div className='p-4 flex flex-col justify-center text-center '>
-                        <h1 className="head text-lg md:text-3xl font-base text-[#ffffff] m-1">Name</h1>
+                        <h1 className="head text-lg md:text-3xl font-base text-[#ffffff] m-1">{name}</h1>
+                        <h2 className="head text- md:text-3xl font-base text-[#ffffff] m-1"> {tags} </h2>
                         <RatingStar/>
                         <div className="button items-center flex justify-center">
                         <button className="buttonforlink text-lg md:text-2xl bg-white m-4 p-2 rounded-lg hover:bg-[#2B5E53] hover:text-[#ffffff] ">
-                            กดเพื่อดูเรซูเม่
+                           <a href={link} target="_blank" rel="noopener noreferrer">กดเพื่อดูเรซูเม่ </a> 
                         </button>
                         <Bookmark/>
                         </div>

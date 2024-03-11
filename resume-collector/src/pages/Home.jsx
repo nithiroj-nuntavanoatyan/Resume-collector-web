@@ -30,7 +30,7 @@ function Home() {
                 <div className="alltext2 max-w-[1080px] mx-auto grid lg:grid-cols-2 items-center text-white">
                     <div className="text2 flex-col justify-between items-center max-w-[800px] px-4">
                     <h1 className="welcome text-4xl font-medium md:text-5xl uppercase">{thai_title2}</h1>
-                    <p className="intro flex justify-between items-center text-3xl py-4 md:text-3xl ">{thai_introduction2}</p>
+                    <p className="intro flex justify-between items-center text-2xl py-4 md:text-3xl ">{thai_introduction2}</p>
                     </div>
                     <img className="picture1 md:max-w-max md:max-h-max lg:max-w-[512px] lg:max-h-[512px]" src={homepicture2} />
                 </div>

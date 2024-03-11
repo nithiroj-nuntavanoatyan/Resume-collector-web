@@ -33,7 +33,7 @@ function RatingStar() {
 
                 })}
                 <h1 className="text p-2 text-sm sm:text-base md:text-lg text-center text-[#ffffff]">
-                    total rating <br/> (number of user)
+                    {rating} / 5 <br/> (number of user)
                 </h1>
             </div>
         </div>

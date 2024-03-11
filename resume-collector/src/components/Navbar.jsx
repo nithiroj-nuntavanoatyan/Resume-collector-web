@@ -20,8 +20,8 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar bg-[#2B5E53] h-auto w-full sticky top-0 ">
-            <div className="flex justify-between items-center h-auto px-3 py-4">
+        <nav className="navbar bg-[#2B5E53] h-auto w-full sticky top-0 z-50  ">
+            <div className="flex justify-between items-center h-auto px-3 py-4 relative">
                 <div className="title flex justify-center items-center text-lg sm:text-3xl font-black text-[#ffffff] uppercase">
                     <Link to="/Home">
                         <img src={logo} className="hidden sm:flex sm:w-16 mx-2" alt="Logo" />
@@ -47,7 +47,7 @@ function Navbar() {
 
             {/* Other device */}
             {isMenuOpen ? (
-                <nav className="navbar-other-device bg-[#2B5E53] h-auto w-full sticky top-0">
+                <nav className="navbar-other-device bg-[#2B5E53] h-auto w-full sticky top-0 z-50 ">
                     <ul className="nav-items-responsive text-xl font-bold text-[#E3F2EF] flex-col xl:hidden uppercase ">
                         <li className="py-1.5">
                             <div onClick={() => setIsMenuOpen(false)}>
