@@ -11,13 +11,14 @@ function Resume() {
         { name: "การตลาด", image: "https://cdn-icons-png.flaticon.com/128/1260/1260235.png" },
         { name: "บริหาร", image: "https://cdn-icons-png.flaticon.com/128/3273/3273070.png" },
         { name: "การเงินและการบัญชี", image: "https://cdn-icons-png.flaticon.com/128/1552/1552545.png" },
+        
     ]
     
 
     return (
         <section className='hero'>
             <div className="flex justify-center pt-6 px-4">
-                <h1 className="resume-head text-2xl font-bold sm:text-3xl lg:text-5xl text-center uppercase">
+                <h1 className="resume-head text-2xl font-bold sm:text-3xl lg:text-4xl text-center uppercase">
                     หมวดหมู่ของเรซูเม่
                 </h1>
             </div>

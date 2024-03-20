@@ -8,7 +8,7 @@ function Search () {
     return (
         <section className='hero'>
             <div className="flex justify-center items-center">
-                <div className="text-2xl font-bold sm:text-5xl m-2 p-4 text-center"><h1>{thai_searchtitle}</h1></div>
+                <div className="text-2xl font-bold sm:text-4xl m-2 p-4 text-center"><h1>{thai_searchtitle}</h1></div>
             </div>
             <div className="">
                 <Searchbar/>

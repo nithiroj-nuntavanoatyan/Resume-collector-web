@@ -16,8 +16,8 @@ function Favorites() {
                 <div className="TextPanel1 h-2/4">
                     <div className="alltext text-center flex justify-center items-center">
                         <div className="text flex-col justify-between items-center">
-                            <h1 className="welcome text-2xl font-extrabold md:text-5xl">{thai_aboutustitle}</h1>
-                            <p className="intro flex justify-between items-center text-2xl py-4 md:text-4xl ">{thai_aboutusintroduction}</p>
+                            <h1 className="welcome text-2xl font-extrabold md:text-4xl">{thai_aboutustitle}</h1>
+                            <p className="intro flex justify-between items-center text-2xl py-4 md:text-3xl ">{thai_aboutusintroduction}</p>
                         </div>
                     </div>
                 </div>
@@ -27,22 +27,22 @@ function Favorites() {
                 <div className="TextPanel1 h-full w-full bg-[#9793CD] pr-4 pl-4 py-6">
                     <div className="alltext text-center flex justify-center items-center text-[#e0f8f3]">
                         <div className="text flex-col justify-between items-center ">
-                            <h1 className="welcome text-2xl font-extrabold md:text-4xl">ช่องทางการติดต่อ</h1>
+                            <h1 className="welcome text-2xl font-extrabold md:text-3xl">ช่องทางการติดต่อ</h1>
                             <ul>
                                 <li>
-                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-4xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact}</span>
+                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-3xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact}</span>
                                     </p>
                                 </li>
                                 <li>
-                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-4xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact1}</span>
+                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-3xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact1}</span>
                                     </p>
                                 </li>
                                 <li>
-                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-4xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact2}</span>
+                                    <p className="intro1 flex justify-between items-center sm:text-2xl py-4  md:text-3xl "><span className="flex items-center"><MdOutlineEmail className="mr-2" />{aboutus_contact2}</span>
                                     </p>
                                 </li>
                             </ul>
-                            <p className="intro2 flex justify-between items-center sm:text-2xl py-4 md:text-4xl "><span className="flex items-center"><FaFacebook className="mr-2" />{aboutus_contact3}</span></p>
+                            <p className="intro2 flex justify-between items-center sm:text-2xl py-4 md:text-3xl "><span className="flex items-center"><FaFacebook className="mr-2" />{aboutus_contact3}</span></p>
                         </div>
                     </div>
                 </div>

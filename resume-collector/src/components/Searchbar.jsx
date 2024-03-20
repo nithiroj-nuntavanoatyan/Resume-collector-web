@@ -14,26 +14,21 @@ function Searchbar() {
 
 
     const searchbar = async () => {
-        try {
-            // Create a query based on search criteria
+        try {           
             const q = query(collection(db, "Resume"), where("category.Jobtitle", "==", searchTerm), orderBy("dateCreatedAt", "desc"));
-
-            // Execute the query and get results
             const querySnapshot = await getDocs(q);
-
-            // Extract and return the matching documents
             const results = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
             setSearchResults(results);
             setShowNoResults(results.length === 0);
         } catch (error) {
             console.error("Error searching Firestore:", error);
-            return []; // Return an empty array on error
+            return []; 
         }
     };
 
     const searchbutton = (e) => {
-        e.preventDefault(); // Prevent default form submission
-        searchbar(); // Call the search function directly
+        e.preventDefault(); 
+        searchbar(); 
     };
 
     return (
@@ -42,7 +37,7 @@ function Searchbar() {
             <div className="search-input flex justify-center items-center">
                 <form action="searchbar " onSubmit={searchbutton}>
                     <div className="searchbar flex justify-center items-center">
-                        <input className="w-[180px] h-[45px] sm:h-[60px] sm:w-[450px] text-base sm:text-3xl text-center border-4 border-[#9793CD] rounded-lg font-semibold" type="text" placeholder="ใส่ชื่อหมวดหมู่ที่ต้องการ" required value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
+                        <input className="w-[180px] h-[45px] sm:h-[60px] sm:w-[450px] sm:text-2xl text-center border-4 border-[#9793CD] rounded-lg font-semibold" type="text" placeholder="ใส่ชื่อหมวดหมู่ที่ต้องการ" required value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
                         <button className="searchbutton m-2 text-lg bg-[#2B5E53] p-2 rounded-md text-white"><span className="flex items-center" ><IoSearchSharp />ค้นหา</span></button>
                     </div>
                 </form>
@@ -56,7 +51,7 @@ function Searchbar() {
                     ))
                 ) : showNoResults && (
                     <div>
-                        <h1 className="noresult text-lg text-center">ขออภัย, ไม่พบสิ่งที่คุณค้นหา</h1>
+                        <h1 className="noresult text-lg text-center">ขออภัย ไม่พบสิ่งที่คุณค้นหา</h1>
                     </div>
                     
                 )}

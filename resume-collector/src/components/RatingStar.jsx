@@ -8,7 +8,7 @@ function RatingStar() {
     const [hover, setHover] = useState(null);
 
     return (
-        <div className="ratingstar">
+        <div className="ratingstar px-2">
             <div className="ratingstar align-middle flex items-center justify-center">
                 {[...Array(5)].map((star, index) => {
                     const ratingValue = index + 1;
@@ -28,13 +28,8 @@ function RatingStar() {
                                 onMouseLeave={() => setHover(null)}
                             />
                         </label>
-
                     )
-
                 })}
-                <h1 className="text p-2 text-sm sm:text-base md:text-lg text-center text-[#ffffff]">
-                    {rating} / 5 <br/> (number of user)
-                </h1>
             </div>
         </div>
     )
