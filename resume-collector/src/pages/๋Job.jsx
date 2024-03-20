@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import AddResume from "../components/AddResume"
 import ResumeCard from "../components/ResumeCard"
-import SortingFilter from "../components/SortingFilter"
 import { useEffect, useState } from 'react';
 import { collection, orderBy, query,  where, onSnapshot, } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
@@ -21,12 +20,12 @@ function Job() {
   const getData = async () => {
     setIsLoading(true);
     try {
-      const docRef = query(collection(db, "Resume"), where("category.Jobtitle", "==", Jobtitle)); 
-      
+      const docRef = query(collection(db, "Resume"), where("category.Jobtitle", "==", Jobtitle));
+  
       const docSnap = await getDocs(docRef);
       const retrievedResumes = [];
       docSnap.forEach((doc) => {
-        retrievedResumes.push({ id: doc.id, ...doc.data() }); 
+        retrievedResumes.push({ id: doc.id, ...doc.data() });
       });
       setResumes(retrievedResumes);
     } catch (error) {
@@ -35,6 +34,7 @@ function Job() {
       setIsLoading(false);
     }
   };
+  
 
   useEffect(() => {
 
@@ -58,10 +58,9 @@ function Job() {
   return (
     <div>
       <div className="header">
-        <div className="headername text-3xl md:text-5xl my-3 text-center font-semibold grid-rows-3 md:flex md:justify-around items-center ">
+        <div className="headername text-2xl md:text-4xl my-3 text-center font-semibold grid-rows-3 md:flex md:justify-around items-center ">
           {Jobtitle}
           <ul>
-            <SortingFilter />
             <AddResume />
           </ul>
         </div>
@@ -72,7 +71,7 @@ function Job() {
         <h1 className="loadingtext text-3xl font-semibold text-center items-center">กำลังโหลดข้อมูล</h1>
       ) : (
         resumes.map((resume) => (
-          <ResumeCard key={resume.id} resumeData={resume} />
+          <ResumeCard key={resume.id} resumeData={resume} resumeId={resume.id}/>
         ))
       )}
       </div>

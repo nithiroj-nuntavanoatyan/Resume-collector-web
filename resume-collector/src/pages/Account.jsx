@@ -12,28 +12,13 @@ function Login() {
     // please don't delete this delete this make the whole account page disappear
     const [user, setUser] = useState();
 
-    // const mainuser = JSON.parse(localStorage.getItem('user'));
+    
     const navigate = useNavigate()
 
     useEffect(() => {
         const mainuser = JSON.parse(localStorage.getItem('user'));
-        setUser(mainuser); // Update user state for immediate navbar sync
+        setUser(mainuser); 
     }, []);
-
-    // function for sign in and get information from user
-    // const handleGoogleSignIn = () => {
-    //     signInWithPopup(auth, provider).then((result) => {
-    //         setUser(result.user.email);
-    //         setUser(result.user.email);
-    //         localStorage.setItem('email', result.user.email);
-    //         localStorage.setItem('name', result.user.displayName);
-    //         localStorage.setItem('profile', result.user.photoURL);
-    //         localStorage.setItem('user', JSON.stringify(result.user));
-    //         navigate('/Home');
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // }
 
     const handleGoogleSignIn = async () => {
         try {
@@ -46,12 +31,6 @@ function Login() {
         }
     }
 
-    // function for geting the item 
-    // useEffect(() => {
-    //     setUser(localStorage.getItem('email'))
-    //     setUser(localStorage.getItem('name'))
-    //     setUser(localStorage.getItem('profile'))
-    // })
 
     // function for sign out
     const handleGoogleLogout = () => {
