@@ -15,8 +15,6 @@ const ResumeCard = ({ resumeData, resumeId }) => {
     const mainuser = JSON.parse(localStorage.getItem('user'));
 
     //check condition for user to see is login or not this code may change after we connecto to database
-
-
     return (
         <div className='card-container flex justify-center m-4 rounded-xl w-10/12 h-10/12 md:w-9/12 md:h-[330px]  bg-[#669b81] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg'>
             {mainuser ? (
@@ -36,7 +34,8 @@ const ResumeCard = ({ resumeData, resumeId }) => {
                             <Bookmark resumeId={resumeId} />
                         </div>
                         <div className="button items-center flex justify-center">
-                            {/* <DeleteResume resumeId={resumeId}/> */}    
+                            <DeleteResume resumeId={resumeId} resumeData={resumeData}/>
+                                
                         </div>
                     </div>
 
