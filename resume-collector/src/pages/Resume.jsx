@@ -11,7 +11,10 @@ function Resume() {
         { name: "การตลาด", image: "https://cdn-icons-png.flaticon.com/128/1260/1260235.png" },
         { name: "บริหาร", image: "https://cdn-icons-png.flaticon.com/128/3273/3273070.png" },
         { name: "การเงินและการบัญชี", image: "https://cdn-icons-png.flaticon.com/128/1552/1552545.png" },
-        
+        { name: "วิศวกรรม", image: "https://cdn-icons-png.flaticon.com/128/3270/3270936.png" },
+        { name: "นักออกแบบกราฟิก", image: "https://cdn-icons-png.flaticon.com/128/3270/3270932.png" },
+        { name: "พนักงานขาย", image: "https://cdn-icons-png.flaticon.com/128/3270/3270921.png" },
+        { name: "อินฟลูเอนเซอร์", image: "https://cdn-icons-png.flaticon.com/128/3270/3270948.png" },
     ]
     
 

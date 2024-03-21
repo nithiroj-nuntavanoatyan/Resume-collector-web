@@ -20,7 +20,7 @@ function Job() {
   const getData = async () => {
     setIsLoading(true);
     try {
-      const docRef = query(collection(db, "Resume"), where("category.Jobtitle", "==", Jobtitle));
+      const docRef = query(collection(db, "resumes"), where("category.Jobtitle", "==", Jobtitle));
   
       const docSnap = await getDocs(docRef);
       const retrievedResumes = [];
@@ -37,11 +37,9 @@ function Job() {
   
 
   useEffect(() => {
-
     getData();
-    
     const unSubcribe = onSnapshot(
-      query(collection(db, "Resume"), where("category.Jobtitle", "==", Jobtitle), orderBy("dateCreatedAt", "desc")),
+      query(collection(db, "resumes"), where("category.Jobtitle", "==", Jobtitle), orderBy("dateCreatedAt", "desc")),
       (snapshot) => {
         setIsLoading(true);
         const retrievedResumes = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));

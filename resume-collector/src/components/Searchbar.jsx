@@ -15,7 +15,7 @@ function Searchbar() {
 
     const searchbar = async () => {
         try {           
-            const q = query(collection(db, "Resume"), where("category.Jobtitle", "==", searchTerm), orderBy("dateCreatedAt", "desc"));
+            const q = query(collection(db, "resumes"), where("category.Jobtitle", "==", searchTerm), orderBy("dateCreatedAt", "desc"));
             const querySnapshot = await getDocs(q);
             const results = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
             setSearchResults(results);
@@ -37,7 +37,7 @@ function Searchbar() {
             <div className="search-input flex justify-center items-center">
                 <form action="searchbar " onSubmit={searchbutton}>
                     <div className="searchbar flex justify-center items-center">
-                        <input className="w-[180px] h-[45px] sm:h-[60px] sm:w-[450px] sm:text-2xl text-center border-4 border-[#9793CD] rounded-lg font-semibold" type="text" placeholder="ใส่ชื่อหมวดหมู่ที่ต้องการ" required value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
+                        <input className="w-[180px] h-[45px] sm:h-[60px] sm:w-[450px] sm:text-2xl text-center border-4 border-[#0A1D56] rounded-lg font-semibold" type="text" placeholder="ใส่ชื่อหมวดหมู่ที่ต้องการ" required value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
                         <button className="searchbutton m-2 text-lg bg-[#2B5E53] p-2 rounded-md text-white"><span className="flex items-center" ><IoSearchSharp />ค้นหา</span></button>
                     </div>
                 </form>
