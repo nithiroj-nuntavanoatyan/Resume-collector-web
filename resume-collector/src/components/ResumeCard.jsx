@@ -5,11 +5,12 @@ import DeleteResume from "./DeleteResume";
 import RatingStar from "./RatingStar";
 import RatingStarcomponent from "./RatingStarcomponent";
 import Bookmark from "./bookmark";
+import { Link } from "react-router-dom";
 
 const ResumeCard = ({ resumeData, resumeId }) => {
 
     const thailogintitle = "โปรดเข้าสู่ระบบเพื่อดูเรซูเม่"
-    const { name, link, tags , category } = resumeData;
+    const { name, link, tags, category } = resumeData;
     const jobTitle = category.Jobtitle;
 
     const mainuser = JSON.parse(localStorage.getItem('user'));
@@ -25,8 +26,8 @@ const ResumeCard = ({ resumeData, resumeId }) => {
                             <h2 className="head text-lg md:text-xl font-base text-[#ffffff] m-1">อาชีพ: {tags} </h2>
                             <h2 className="head text-lg md:text-xl font-base text-[#ffffff] m-1">หมวดหมู่: {jobTitle} </h2>
                         </div>
-                        <RatingStar resumeId={resumeId}/>
-                        <RatingStarcomponent/>
+                        <RatingStar resumeId={resumeId} />
+                        <RatingStarcomponent />
                         <div className="button items-center flex justify-center">
                             <button className="buttonforlink text-lg md:text-2xl text-[#ffffff] bg-[#24362d] m-2 p-2 rounded-lg hover:bg-[#000000]  ">
                                 <a href={link} target="_blank" rel="noopener noreferrer">ดูเรซูเม่</a>
@@ -34,8 +35,8 @@ const ResumeCard = ({ resumeData, resumeId }) => {
                             <Bookmark resumeId={resumeId} />
                         </div>
                         <div className="button items-center flex justify-center">
-                            <DeleteResume resumeId={resumeId} resumeData={resumeData}/>
-                                
+                            <DeleteResume resumeId={resumeId} resumeData={resumeData} />
+
                         </div>
                     </div>
 
@@ -43,9 +44,9 @@ const ResumeCard = ({ resumeData, resumeId }) => {
             ) : (
                 <>
                     <div className='p-4 flex flex-col justify-center text-center '>
-                        <button className="link text-xl md:text-2xl bg-white m-5 p-4 rounded-lg hover:bg-[#2B5E53] hover:text-[#ffffff] ">
-                            <a href="/Account" >{thailogintitle}</a>
-                        </button>
+                        <Link to="/Account">
+                            <button className="login bg-[#0A1D56] p-3 text-3xl font-medium rounded-xl text-[#ffffff]">{thailogintitle}</button>
+                        </Link>
                     </div>
                 </>
             )
