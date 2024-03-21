@@ -24,8 +24,8 @@ function Favorites() {
             </section>
             {/* contact session */}
             <section>
-                <div className="TextPanel1 h-full w-full bg-[#9793CD] pr-4 pl-4 py-6">
-                    <div className="alltext text-center flex justify-center items-center text-[#e0f8f3]">
+                <div className="TextPanel1 h-full w-full bg-[#89B3AB] pr-4 pl-4 py-6">
+                    <div className="alltext text-center flex justify-center items-center text-[#000000]">
                         <div className="text flex-col justify-between items-center ">
                             <h1 className="welcome text-2xl font-extrabold md:text-3xl">ช่องทางการติดต่อ</h1>
                             <ul>

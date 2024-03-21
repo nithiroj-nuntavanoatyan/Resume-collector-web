@@ -29,13 +29,13 @@ function Footer() {
 
 
     return (
-        <footer className="mt-auto bottom-0 bg-[#67438E]">
+        <footer className="mt-auto bottom-0 bg-[#2B5E53]">
             <div className="w-full mx-auto p-4 md:py-8">
                 <div className="md:flex  md:justify-between items-center">
                     <div>
                         <a href="/home" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                             <img src={logo} className="w-8 md:w-16 md:h-16" alt="Logo" />
-                            <span className="self-center m-4 font-semibold text-white text-2xl text-wrap">Resume Explorer</span>
+                            <span className="self-center m-4 font-semibold text-white text-2xl text-wrap uppercase">Resume Explorer</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">

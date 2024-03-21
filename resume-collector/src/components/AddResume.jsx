@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { db } from '../services/FirebaseConfig';
-import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+import { addDoc, collection, serverTimestamp, updateDoc } from "firebase/firestore"
 import { useParams } from 'react-router-dom';
 
 
@@ -35,16 +35,17 @@ function AddResume() {
 
     const writeResume = async () => {
         
-        const docRef = await addDoc(collection(db, "Resume"), {
+        const docRef = await addDoc(collection(db, "resumes"), {
             userName : String(mainuser.displayName) ,
             userEmail : String(mainuser.email) ,
             name: String(nameinput),
             category: Jobtitle,
             tags: String(taginput),
             link: String(linkinput),
-            dateCreatedAt: serverTimestamp(),
+            dateCreatedAt: serverTimestamp(), 
         });
-        console.log("Document written with ID: ", docRef.id);
+        const resumeNumber = docRef.id;
+        await updateDoc(docRef, { resumeNumber });
     }
 
     const handleSubmit = (e) => {
@@ -101,7 +102,7 @@ function AddResume() {
                                         <div className='flex items-center'>
                                             <input type="checkbox" name="" id="" className='checkforagreement w-8 h-8 rounded-md' required checked={accept} onChange={(e) => { setAccept(e.target.checked) }} />
                                             <label className='agreeforterm text-base sm:text-lg m-2'>ข้าพเจ้ายืนยันว่า เรซูเม่นี้มิได้ได้มาโดยไม่ได้รับการยินยอมจากเจ้าของผลงานและถูกต้องตาม
-                                                <a className='agreement underline text-white' href="https://www.ipthailand.go.th/images/3534/2565/Copyright/Copyrig_Act2_TH.pdf" target="_blank" rel="noopener noreferrer">
+                                                <a className='agreement underline text-white' href="https://www.ipthailand.go.th/images/3534/2565/Copyright/Copyright_Act2_TH.pdf" target="_blank" rel="noopener noreferrer">
                                                     พระราชบัญญัติลิขสิทธิ์
                                                 </a>
                                             </label>
@@ -118,7 +119,7 @@ function AddResume() {
             )}
             {successModal && (
                 <div className="fixed inset-0 flex justify-center text-center items-center overflow-y-auto">
-                    <div className="modal w-1/2 mx md:w-1/3 p-4 bg-[#6962AD] rounded-lg shadow-xl sm:p-2">
+                    <div className="modal w-1/2 mx md:w-1/3 p-4 bg-[#669b81] rounded-lg shadow-xl sm:p-2">
                         <div className="head flex items-center justify-end text-white">
                             <button onClick={handleCloseSuccessModal} className="text-[] hover:text-white ">
                                 <span className="flex items-center"><IoCloseCircleSharp className="mr-2" size={30} /></span>
