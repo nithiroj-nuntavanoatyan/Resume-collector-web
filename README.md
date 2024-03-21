@@ -32,8 +32,3 @@ Now for who want to push the work they done
 
 2.then go to github and your project then there will show a chnage that branch has change and do you want to merge it or not the check the code you write and then merge
 
-the step below are for people who want to create branch for themself then merge it with main branch i can't explain it clearly so i will paste the link.
-
-https://www.youtube.com/watch?v=HkdAHXoRtos&t=331s&ab_channel=Fireship
-
-https://www.youtube.com/watch?v=8lGpZkjnkt4&t=29s&ab_channel=Fireship
