@@ -7,9 +7,6 @@ import { getDocs } from "firebase/firestore";
 import { db } from "../services/FirebaseConfig";
 
 
-
-// this need to be fix after progress
-
 function Job() {
 
   const { Jobtitle } = useParams()
