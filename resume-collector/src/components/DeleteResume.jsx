@@ -3,12 +3,12 @@ import { db } from "../services/FirebaseConfig";
 
 function DeleteDocument( {resumeId , resumeData }) {
     const { userEmail } = resumeData;
-    const documenId = resumeId
+    const documenId = resumeId 
     const userIdCreated = userEmail
     const mainuser = JSON.parse(localStorage.getItem('user'));
     const currentUserId = mainuser.email
     
-    
+    // function for handle delete resume which check if userwhoclick is the same as user who created
     const handleDelete = async () => {
         if (!documenId) return; 
 

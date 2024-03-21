@@ -32,7 +32,7 @@ function Job() {
     }
   };
   
-
+  // for loading the job that is == to the jobtitle which is a useparams 
   useEffect(() => {
     getData();
     const unSubcribe = onSnapshot(
