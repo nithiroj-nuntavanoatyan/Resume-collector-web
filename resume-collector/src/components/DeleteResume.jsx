@@ -3,19 +3,14 @@ import { db } from "../services/FirebaseConfig";
 
 function DeleteDocument( {resumeId , resumeData }) {
     const { userEmail } = resumeData;
-    const documenId = resumeId// Assuming you receive the document ID as a prop
+    const documenId = resumeId 
     const userIdCreated = userEmail
     const mainuser = JSON.parse(localStorage.getItem('user'));
     const currentUserId = mainuser.email
     
-    
-    console.log(documenId);
-    console.log(userIdCreated);
-    console.log(currentUserId);
-    
-    
+    // function for handle delete resume which check if userwhoclick is the same as user who created
     const handleDelete = async () => {
-        if (!documenId) return; // Handle cases where documentId is missing
+        if (!documenId) return; 
 
         try {
             if (currentUserId === userIdCreated) {
@@ -28,7 +23,6 @@ function DeleteDocument( {resumeId , resumeData }) {
             }
           } catch (error) {
             console.error("Error deleting document:", error);
-            // Handle errors appropriately (e.g., display error message to user)
           }
     };
 

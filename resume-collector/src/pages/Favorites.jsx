@@ -11,6 +11,7 @@ function Favorites() {
     
     
     // comment bcause this section of code cause an error that still can't be fix so favorites function can't fetch it from the database
+    
     // const [isLoading, setIsLoading] = useState(true); // Added loading state for better UX
     // const [error, setError] = useState(null);
     // const [favorites, setFavorites] = useState(null);

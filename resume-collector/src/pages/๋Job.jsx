@@ -7,9 +7,6 @@ import { getDocs } from "firebase/firestore";
 import { db } from "../services/FirebaseConfig";
 
 
-
-// this need to be fix after progress
-
 function Job() {
 
   const { Jobtitle } = useParams()
@@ -35,7 +32,7 @@ function Job() {
     }
   };
   
-
+  // for loading the job that is == to the jobtitle which is a useparams 
   useEffect(() => {
     getData();
     const unSubcribe = onSnapshot(
